@@ -12,7 +12,7 @@ You can contribute to this site by submitting pull request.
 ### Status
 <p>
   <a href="#">
-    <img src="https://img.shields.io/badge/stages-development-informational">
+    <img src="https://img.shields.io/badge/stages-production-informational">
   </a>
   <a href="#">
     <img src="https://img.shields.io/github/repo-size/novaardiansyah/course-nodejs?label=size&color=informational" />
