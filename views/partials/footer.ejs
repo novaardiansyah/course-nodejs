@@ -1,0 +1,67 @@
+  </section>
+  <!-- /#content -->
+  
+  <footer class="position-relative">
+    <nav class="navbar navbar-dark bg-dark sticky-bottom py-3 d-flex justify-content-center">
+      <div class="text-white">
+        &copy; 2020 Powered by <a href="https://github.com/novaardiansyah1" class="text-white">Nova Ardiansyah.</a>
+      </div>
+    </nav>
+  </footer>
+  
+  <script src="/public/assets/bootstrap/js/jquery-3.4.1.min.js"></script>
+  <script src="/public/assets/bootstrap/js/popper.min.js"></script>
+  <script src="/public/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    // ajax javascript
+    const delete_blog = document.querySelector('.delete-blog');
+    
+    delete_blog.addEventListener('click', (e) => {
+      e.preventDefault();
+      const endpoint = `/blogs/${delete_blog.dataset.blog_id}`;
+      
+      fetch(endpoint, {
+        method: 'delete'
+      })
+        // normal sintaks
+        /*.then((response) => {
+          response.json()
+            .then((data) => {
+              window.location.href = data.redirect;
+            })
+        })*/
+        // simple sintaks
+        .then((response) => response.json())
+        .then((data) => {
+          window.location.href = data.redirect;
+        })
+        .catch((err) => {
+          alert('error');
+          console.log(err);
+        });
+    });
+    
+    
+    // ajax jquery
+    /* $(document).ready( () => {
+      $('.container').on('click','.delete-blog', (e) => {
+        e.preventDefault();
+        const blogId = $('.delete-blog').data('blog_id');
+        const endpoint = `/blogs/${blogId}`;
+        
+        $.ajax({
+          url: endpoint,
+          type: 'delete',
+          dataType: 'json',
+          success: (result) => {
+            window.location.href = result.redirect;
+          },
+          error: (err) => {
+            alert('error');
+          }
+        });
+      });
+    }); */
+  </script>
+</body>
+</html>

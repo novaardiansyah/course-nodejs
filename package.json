@@ -1,0 +1,32 @@
+{
+  "name": "course-nodejs",
+  "version": "1.2.9",
+  "description": "This repository is a project I created while learning about NodeJs.",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/novaardiansyah1/course-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/novaardiansyah1/course-nodejs/issues"
+  },
+  "homepage": "https://github.com/novaardiansyah1/course-nodejs#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "lodash": "^4.17.20",
+    "morgan": "^1.10.0",
+    "mongoose": "^5.10.8"
+  }
+}

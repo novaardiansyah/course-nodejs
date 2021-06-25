@@ -1,0 +1,31 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col mt-4">
+      <h3 class="text-dark">All Blogs</h3>
+      <hr class="mt-0 mb-4"></hr>
+      
+      <% if(blogs.length > 0) { %>
+        <% blogs.forEach(blog => { %>
+          <div class="card mb-3">
+            <div class="card-body">
+              <a href="/blogs/<%= blog._id %>">
+                <h5 class="card-title text-dark"><%= blog.title %></h5>
+                <p class="card-text text-secondary"><%= blog.snippet %></p>
+              </a>
+            </div>
+          </div>
+        <% }); %>
+      <% } else { %>
+        <h3 class="font-weight-light">there is nothing to display..</h3>
+      <% } %>
+      
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.container -->      
+
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,45 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2 mt-3">
+      <h3 class="text-primary">create a new blog</h3>
+      <hr class="my-0"></hr>
+      
+      <form action="/blogs" method="post">
+        <div class="form-group row mt-3">
+          <label for="title" class="col-md-2 col-form-label text-md-right">Title:</label>
+          <div class="col-md-10">
+            <input type="text" class="form-control" id="title" name="title">
+          </div>
+        </div>
+        <!-- /.form-group -->
+        <div class="form-group row">
+          <label for="snippet" class="col-md-2 col-form-label text-md-right">Snippet:</label>
+          <div class="col-md-10">
+            <input type="text" class="form-control" id="snippet" name="snippet">
+          </div>
+        </div>
+        <!-- /.form-group -->
+        <div class="form-group row">
+          <label for="body" class="col-md-2 col-form-label text-md-right">Body:</label>
+          <div class="col-md-10">
+            <input type="text" class="form-control" id="body" name="body">
+          </div>
+        </div>
+        <!-- /.form-group -->
+        
+        <div class="row d-flex justify-content-end mt-3">
+          <div class="col-md-6">
+            <button type="submit" class="btn btn-primary btn-block">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.container -->
+
+<%- include('../partials/footer.ejs') %>
